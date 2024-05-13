@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="education.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <h3><span>SANDESH</span>RANA</h3>
+    <ul>
+        <li><a href="Contact.html">Contact me</a></li>
+         <li><a href="Galary.html">Galary</a></li>
+         <li><a href="About.html">About me</a></li>
+         <li><a href="index.html">Home</a></li>
+                  
+    </ul>
+</nav>
+    <!-- HTML -->
+<div class="skills-section">
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <i class="fas fa-code"></i>
+        <h3>Programming Languages</h3>
+        <ul>
+          <li>HTML/CSS</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>Java</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-database"></i>
+        <h3>Communication</h3>
+        <ul>
+          <li>Listening</li>
+          <li>Reading</li>
+          <li>Expressing</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-brush"></i>
+        <h3>Design Tools</h3>
+        <ul>
+          <li>Adobe Photoshop</li>
+          <li>Adobe Illustrator</li>
+          <li>Sketch</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-server"></i>
+        <h3>Physical games</h3>
+        <ul>
+          <li>Chess</li>
+          <li>Freefire</li>
+          <li>Mobile Legend </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="skills-chart">
+    <div class="skill" style="width: 80%;">Programming Languages</div>
+    <div class="skill" style="width: 60%;">Communication</div>
+    <div class="skill" style="width: 70%;">Design Tools</div>
+    <div class="skill" style="width: 50%;">Physical games</div>
+  </div><br><br><br>
+  <canvas id="skills-chart" width="40px" height="40px"></canvas>
+
+  <script>
+    // JavaScript
+const ctx = document.getElementById('skills-chart').getContext('2d');
+const skillsData = {
+  labels: ['Web design', 'C programming', ' Graphic Design', 'Communication'],
+  datasets: [{
+    data: [75, 59, 49, 80],
+    backgroundColor: [
+      'rgba(255, 99, 132, 0.2)',
+      'rgba(54, 162, 235, 0.2)',
+      'rgba(255, 206, 86, 0.2)',
+      'rgba(75, 192, 192, 0.2)'
+    ],
+    borderColor: [
+      'rgba(255, 99, 132, 1)',
+      'rgba(54, 162, 235, 1)',
+      'rgba(255, 206, 86, 1)',
+      'rgba(75, 192, 192, 1)'
+    ],
+    borderWidth: 1
+  }]
+};
+
+const skillsChart = new Chart(ctx, {
+  type: 'pie',
+  data: skillsData,
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'My Skills'
+      }
+    }
+  },
+});
+  </script>
+   
+</body>
+</html>

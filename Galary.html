@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galary</title>
+    <style>
+        body{
+            background-color: #141C23;
+        }
+        .gallery * {
+  font-family: Nunito, sans-serif;
+}
+
+.gallery .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery img {
+  object-fit: cover;
+}
+
+.gallery .text-blk {
+  line-height: 28px;
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  text-align: center;
+  color: #666666;
+  max-width: 1030px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 30px;
+  margin-left: 0px;
+}
+
+.gallery .responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+}
+
+.gallery .responsive-container-block.bigContainer {
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+
+.gallery .responsive-container-block.Container {
+  max-width: 1320px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+}
+
+.gallery .responsive-container-block.cardContainer {
+  overflow-x: visible;
+  overflow-y: visible;
+}
+
+.gallery .text-blk.headingText {
+  font-size: 25px;
+  line-height: 34px;
+  font-weight: 700;
+  color: #d97a0b;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+}
+
+.gallery .text-blk.name {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.gallery .text-blk.position {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.gallery .swiper-slide {
+  justify-content: flex-start;
+  display: flex;
+}
+
+.gallery #ipou8 {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+  cursor: pointer;
+  height: 14px;
+}
+
+.gallery #ipou8-2 {
+  height: 14px;
+  transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);
+  cursor: pointer;
+}
+
+.gallery .btn {
+  display: none;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 30px;
+  margin-left: 0px;
+  flex-direction: row-reverse;
+}
+
+.gallery .swiper-pagination {
+  position: static;
+  text-align: left;
+  margin-top: 30px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery .swiper-container-horizontal&gt;
+
+.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin-top: 0px;
+  margin-right: 4px;
+  margin-bottom: 0px;
+  margin-left: 4px;
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: #eaa947;
+}
+
+.gallery .mainImg {
+  width: 100%;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 30px;
+  margin-left: 0px;
+  height: 470px;
+}
+
+.gallery .mainImg:hover {
+  transform: translateY(-10px);
+}
+
+.gallery .blockImg {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  width: 100%;
+}
+
+.gallery .swiper-container.mySwiper {
+  overflow-y: hidden;
+  padding-top: 20px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+@media (max-width: 1024px) {
+  .gallery .mainImg {
+    height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery .responsive-container-block.Container {
+    margin-top: 80px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .gallery .responsive-container-block.cardContainer {
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+  }
+
+  .gallery .responsive-container-block.Container {
+    margin-top: 80px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    justify-content: center;
+  }
+
+  .gallery .swiper-slide {
+    justify-content: center;
+  }
+
+  .gallery .text-blk.headingText {
+    text-align: center;
+  }
+
+  .gallery .swiper-pagination {
+    text-align: center;
+  }
+
+  .gallery #ipou8-2 {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+  }
+
+  .gallery #ipou8 {
+    height: 14px;
+  }
+
+  .gallery .swiper-slide.empty {
+    display: none;
+  }
+
+  .gallery .responsive-container-block.Container {
+    margin-top: 80px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery .responsive-container-block.Container {
+    margin-top: 80px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .gallery .responsive-container-block.cardContainer {
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+  }
+
+  .gallery .responsive-container-block.Container {
+    align-items: center;
+    margin-top: 80px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+  }
+
+  .gallery .text-blk.headingText {
+    text-align: center;
+  }
+
+  .gallery .responsive-container-block.cardContainer {
+    align-items: flex-start;
+  }
+
+  .gallery .btn {
+    justify-content: flex-start;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 30px;
+    margin-left: 0px;
+    text-align: left;
+  }
+
+  .gallery #ipou8-2 {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .gallery .responsive-container-block.bigContainer {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  .gallery .btn {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+  }
+
+  .gallery .responsive-container-block.Container {
+    align-items: flex-start;
+  }
+
+  .gallery .responsive-container-block.bigContainer {
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  .gallery .responsive-container-block.bigContainer {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  .gallery .responsive-container-block.Container {
+    align-items: center;
+  }
+
+  .gallery .responsive-container-block.Container {
+    margin-top: 50px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+  }
+
+  .gallery .mainImg {
+    height: 310px;
+  }
+
+  .gallery .text-blk {
+    line-height: 24px;
+    font-size: 17px;
+  }
+}
+
+h3 span{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: rgb(49, 49, 238);
+    font-weight: bolder;
+    margin-left: 3px;
+}
+h3{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bolder;
+    margin-left: 1px;
+}
+
+nav{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+height: 40px;
+width: 100%;
+display: flex;
+}
+ul{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    /* float: right; */
+    margin-left: 20%;
+}
+
+ul li{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    float:right;
+    list-style: none;
+    padding: 10px 20px 2px;
+}
+ul li a{ text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h3><span>SANDESH</span>RANA</h3>
+    <ul>
+        <li><a href="Contact.html">Contact me</a></li>
+         <li><a href="Galary.html">Galary</a></li>
+         <li><a href="About.html">About me</a></li>
+         <li><a href="index.html">Home</a></li>
+                  
+    </ul>
+</nav>
+    <div class="gallery" unique-script-id="w-w-dm-id">
+        <div class="responsive-container-block bigContainer">
+          <div class="responsive-container-block Container">
+            <p class="text-blk headingText" id="w-c-s-fc_p-1-dm-id">
+              Famous Gallery
+            </p>
+            <p class="text-blk">
+           Have a good day.
+            </p>
+            <div class="responsive-container-block cardContainer">
+              <div class="btn">
+                <div class="swiper-button-nexts">
+                  <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Path.svg">
+                </div>
+                <div class="swiper-button-prevs">
+                  <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Path.svg">
+                </div>
+              </div>
+              <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="blockImg">
+                      <img class="mainImg image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft16.svg">
+                      <img class="mainImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft17.svg">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="blockImg">
+                      <img class="mainImg image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft19.svg">
+                      <img class="mainImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft18.svg">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="blockImg">
+                      <img class="mainImg image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft9.svg">
+                      <img class="mainImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft17.svg">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="blockImg">
+                      <img class="mainImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft18.svg">
+                      <img class="mainImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft20.svg">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="blockImg">
+                      <img class="mainImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft17.svg">
+                      <img class="mainImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft9.svg">
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>var swiper = new Swiper(`[unique-script-id="w-w-dm-id"] .mySwiper`, {
+        pagination: {
+          el: `[unique-script-id="w-w-dm-id"] .swiper-pagination`,
+          clickable: true,
+        },
+        breakpoints: {
+          100: {
+            slidesPerView: 1,
+            spaceBetween: 50,
+          },
+          400: {
+            slidesPerView: 1.5,
+            spaceBetween: 50,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+          },
+          890: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        }
+      });</script>
+</body>
+</html>

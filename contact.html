@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+      
+html {
+  height: 100%;
+  body {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(https://unsplash.it/1920/1080?image=871) fixed;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+  .contact {
+    align-self: center;
+    i {
+      padding: 0 20px;
+      font-size: 0.8em;
+    }
+    h2 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 2.5em;
+      border: 1px solid #555;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding-top: 20px;
+      height: 75px;
+      color: #fff;
+      font-weight: 500;
+      line-height: 40px;
+      padding-left: 50px;
+      text-align: center;
+    }
+  }
+  #contactform {
+    height: 215px;
+    .right {
+      float: right;
+    }
+    input {
+      margin-bottom: 14px;
+      width: 100%;
+      outline: none;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      padding-left: 15px;
+      height: 44px;
+      border-radius: 0;
+    }
+    textarea {
+      margin-bottom: 14px;
+      width: 100%;
+      outline: none;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      padding: 15px;
+      height: 218px;
+      border-radius: 0;
+    }
+    .btn {
+      width: 100%;
+      height: 50px;
+      border-radius: 0;
+      border: 1px solid #333;
+      background: $btnBackground;
+      color: #fff;
+      &:hover {
+        background: lighten($btnBackground, 20%);
+      }
+    }
+  
+  #map-canvas {
+    width: 100%;
+    height: 135px;
+    margin-bottom: 15px;
+    border: 2px solid #fff;
+  }
+}
+
+
+h3 span{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: rgb(49, 49, 238);
+    font-weight: bolder;
+    margin-left: 3px;
+}
+h3{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bolder;
+    margin-left: 1px;
+}
+
+nav{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+height: 40px;
+width: 100%;
+display: flex;
+}
+ul{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    /* float: right; */
+    margin-left: 20%;
+}
+label,p{
+    color: white;
+
+}
+
+ul li{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    float:right;
+    list-style: none;
+    padding: 10px 20px 2px;
+}
+ul li a{ text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <h3><span>SANDESH</span>RANA</h3>
+        <ul>
+            <li><a href="Contact.html">Contact me</a></li>
+             <li><a href="Galary.html">Galary</a></li>
+             <li><a href="About.html">About me</a></li>
+             <li><a href="index.html">Home</a></li>
+                      
+        </ul>
+    </nav>
+    <!-- <script>function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(28.1823295, -82.352912),
+          zoom: 9,
+          mapTypeId: google.maps.MapTypeId.HYBRID,
+          scrollwheel: false,
+          draggable: false,
+          panControl: true,
+          zoomControl: true,
+          mapTypeControl: true,
+          scaleControl: true,
+          streetViewControl: true,
+          overviewMapControl: true,
+          rotateControl: true,
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+      </script> -->
+    <div class="contact" id="contact">
+        <div class="container">
+          <div class="col-md-offset-1 col-md-10">
+            <h2>Contact Me<i class="fa fa-paper-plane-o"></i></h2>
+            <div id="map-canvas"></div>
+          </div>
+          <form method="post" action="contact.php" name="contactform" id="contactform">
+            <div class="col-md-offset-1 col-md-5">
+              <fieldset>
+                <input name="name" type="text" id="name" size="30" placeholder="Name">
+                <br>
+                <input name="email" type="text" id="email" size="30" placeholder="Email">
+                <br>
+                <input name="phone" type="text" id="phone" size="30" placeholder="Phone">
+                <br>
+                <label for="Gender">Gender</label>
+                <input  name="human" type="radio" value="human"><p>Male</p>
+                <input name="human" value="human" type="radio"><p>Female</p>
+                <br>
+              </fieldset>
+            </div>
+            <div class="col-md-5">
+              <fieldset>
+                <textarea name="comments" cols="40" rows="20" id="comments" placeholder="Message"></textarea>
+              </fieldset>
+            </div>
+            <div class="col-md-offset-1 col-md-10">
+              <fieldset>
+                <button type="submit" class="btn btn-lg" id="submit" value="Submit">Send Message</button>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+       </div>
+</body>
+</html>

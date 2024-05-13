@@ -1,0 +1,131 @@
+/* CSS */
+body{
+    /* background-color: orange; */
+    background-image: url(https://t3.ftcdn.net/jpg/03/91/46/10/360_F_391461057_5P0BOWl4lY442Zoo9rzEeJU0S2c1WDZR.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+h3 span{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: rgb(49, 49, 238);
+    font-weight: bolder;
+    margin-left: 3px;
+}
+h3{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bolder;
+    margin-left: 1px;
+}
+
+nav{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+height: 40px;
+width: 100%;
+display: flex;
+}
+ul{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    /* float: right; */
+    margin-left: 20%;
+}
+
+ul li{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    float:right;
+    list-style: none;
+    padding: 10px 20px 2px;
+}
+ul li a{ text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+.skills-section {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .skill-card {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-card i {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .skill-card h3 {
+    margin-top: 0;
+  }
+  
+  .skill-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .skill-card li {
+    margin-bottom: 10px;
+  }
+  
+  .skill-card li:before {
+    content: "\2713";
+    font-size: 18px;
+    color: #4CAF50;
+    margin-right: 10px;
+  }
+
+  .skills-chart {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .skill:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
